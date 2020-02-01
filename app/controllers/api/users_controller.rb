@@ -14,7 +14,7 @@ class Api::UsersController < ApplicationController
   end
   def update
     if current_user
-      user = User.find_by(current_user.id)
+      user = User.find(current_user.id)
       user.name = params[:name] || user.name
       user.email = params[:email] || user.email
       user.password = params[:password] || user.password
@@ -24,6 +24,8 @@ class Api::UsersController < ApplicationController
       else
         render json: { errors: user.errors.full_messages }, status: :bad_request
       end
+    else
+      render json: {message: "Must be logged in to update admin"}
     end
   end
 end
