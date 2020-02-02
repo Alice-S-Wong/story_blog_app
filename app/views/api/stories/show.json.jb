@@ -6,6 +6,7 @@
   friendly_release_date: @story.friendly_release_date,
   posts: @posts.map do |post|
     {
+      post_id: post.id,
       chapter_number: post.chapter_number,
       title: post.title,
       body: post.body,

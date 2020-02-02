@@ -1,5 +1,6 @@
 @stories.map do |story|
   {
+  id: story.id,
   title: story.title,
   author: story.author.pen_name,
   description: story.description,

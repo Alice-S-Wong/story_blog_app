@@ -1,0 +1,12 @@
+@comments.map do |comment|
+  {
+    id: comment.id,
+    name: comment.name,
+    title: comment.title,
+    body: comment.body,
+    post_id: comment.post_id,
+    post: comment.post.title,
+    chapter_number: comment.post.chapter_number,
+    story: comment.post.story.title
+  }
+end

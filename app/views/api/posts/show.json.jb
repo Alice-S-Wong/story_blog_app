@@ -1,0 +1,18 @@
+{
+  id: @post.id,
+  chapter_number: @post.chapter_number,
+  title: @post.title,
+  body: @post.body,
+  release_date: @post.release_date,
+  story_id: @post.story_id,
+  story: @post.story.title,
+  author: @post.story.author.pen_name,
+  comments: @comments.map do |comment|
+    {
+      name: comment.name,
+      title: comment.title,
+      body: comment.body,
+      post_id: comment.post_id
+    }
+  end
+}

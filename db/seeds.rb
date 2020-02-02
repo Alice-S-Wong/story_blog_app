@@ -10,5 +10,6 @@
 
 # Author.create(pen_name: "Jane Doe", bio: "A relatively unknown author.")
 
-# Post.create(chapter_number: 1, title: "first chapter", body: "Some text in the chapter", release_date: "2020-1-1", story_id: 1)
-# Post.create(chapter_number: 2, title: "second chapter", body: "Some text in the chapter", release_date: "2020-1-1", story_id: 1)
+Comment.create(name: "Joe", title: "Yay", body: "This is a comment", post_id: 7)
+Comment.create(name: "Joe", title: "Yay", body: "This is a comment", post_id: 7)
+Comment.create(name: "Joe", title: "Yay", body: "This is a comment", post_id: 7)
