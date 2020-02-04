@@ -1,0 +1,5 @@
+{
+  author: @author.id,
+  pen_name: @author.pen_name,
+  bio: @author.bio
+}
