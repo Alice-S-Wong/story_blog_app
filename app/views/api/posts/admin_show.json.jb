@@ -4,7 +4,8 @@
   title: @post.title,
   body: @post.body,
   release_date: @post.release_date,
+  friendly_release_date: @post.friendly_release_date,
   story_id: @post.story_id,
-  story: @post.story.title,
+  story_title: @post.story.title,
   author: @post.story.author.pen_name,
 }

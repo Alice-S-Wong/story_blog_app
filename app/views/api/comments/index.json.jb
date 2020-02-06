@@ -8,6 +8,7 @@
     post: comment.post.title,
     chapter_number: comment.post.chapter_number,
     story: comment.post.story.title,
-    date: comment.date
+    date: comment.date,
+    friendly_date: comment.friendly_date
   }
 end

@@ -25,7 +25,6 @@ class Api::PostsController < ApplicationController
         release_date: params[:release_date],
         story_id: params[:story_id]
       )
-      p @post.formatted_body
       if @post.save
         render "admin_show.json.jb"
       end
@@ -57,7 +56,9 @@ class Api::PostsController < ApplicationController
       @post.title = params[:title] || @post.title
       @post.body = params[:body] || @post.body
       @post.release_date = params[:release_date] || @post.release_date
-      @post.story_id = params[:story_id] || @post.story_id
+      if params[:story_id] != "" 
+        @post.story_id = params[:story_id] || @post.story_id
+      end
       @post.chapter_number = params[:chapter_number] || @post.chapter_number
       if @post.save
         render "admin_show.json.jb"

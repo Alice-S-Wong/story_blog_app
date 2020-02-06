@@ -14,7 +14,8 @@
       title: comment.title,
       body: comment.body,
       post_id: comment.post_id,
-      date: comment.date
+      date: comment.date,
+      friendly_date: comment.friendly_date
     }
   end
 }
