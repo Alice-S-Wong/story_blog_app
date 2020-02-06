@@ -13,7 +13,8 @@
       name: comment.name,
       title: comment.title,
       body: comment.body,
-      post_id: comment.post_id
+      post_id: comment.post_id,
+      date: comment.date
     }
   end
 }

@@ -7,6 +7,7 @@
     post_id: comment.post_id,
     post: comment.post.title,
     chapter_number: comment.post.chapter_number,
-    story: comment.post.story.title
+    story: comment.post.story.title,
+    date: comment.date
   }
 end

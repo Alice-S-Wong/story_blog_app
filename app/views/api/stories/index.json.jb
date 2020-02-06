@@ -3,6 +3,7 @@
   id: story.id,
   title: story.title,
   author: story.author.pen_name,
+  author_id: story.author.id,
   description: story.description,
   release_date: story.release_date,
   friendly_release_date: story.friendly_release_date

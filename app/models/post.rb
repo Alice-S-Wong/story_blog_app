@@ -1,4 +1,5 @@
 class Post < ApplicationRecord
+  include ActionView::Helpers::TextHelper
   belongs_to :story
   has_many :posts
   def friendly_release_date
@@ -31,5 +32,9 @@ class Post < ApplicationRecord
       month = "December"
     end
     return "#{month} #{date_array[2]}, #{date_array[0]}"
+  end
+  def formatted_body
+    body = self.body
+    return simple_format(body)
   end
 end

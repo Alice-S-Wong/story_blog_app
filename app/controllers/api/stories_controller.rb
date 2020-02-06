@@ -20,7 +20,7 @@ class Api::StoriesController < ApplicationController
         release_date: params[:release_date],
         author_id: params[:author_id]
       )
-      if @story.save
+      if @story.save!
         render "admin_show.json.jb"
       end
     else
@@ -46,7 +46,9 @@ class Api::StoriesController < ApplicationController
       @story.title = params[:title] || @story.title
       @story.description = params[:description] || @story.description
       @story.release_date = params[:release_date] || @story.release_date
-      @story.author_id = params[:author_id] || @story.author_id
+      if params[:author_id] != "" 
+        @story.author_id = params[:author_id] || @story.author_id
+      end
       if @story.save
         render "admin_show.json.jb"
       end

@@ -25,6 +25,7 @@ class Api::PostsController < ApplicationController
         release_date: params[:release_date],
         story_id: params[:story_id]
       )
+      p @post.formatted_body
       if @post.save
         render "admin_show.json.jb"
       end
