@@ -23,14 +23,15 @@ class Api::CommentsController < ApplicationController
     end
   end
   def create
-    comment = Comment.new(
+    @comment = Comment.new(
       name: params[:name],
       title: params[:title],
       body: params[:body],
-      post_id: params[:post_id]
+      post_id: params[:post_id],
+      date: DateTime.now.to_date.to_s
     )
-    if comment.save
-      render json: {message: "comment created"}
+    if @comment.save
+      render "show.json.jb"
     end
   end
   def destroy
