@@ -25,5 +25,8 @@ Rails.application.routes.draw do
     get "/authors" => "authors#index"
     post "/authors" => "authors#create"
     patch "/authors/:id" => "authors#update"
+    get "/intros" => "intros#index"
+    post "/intros" => "intros#create"
+    patch "/intros/:id" => "intros#update"
   end
 end

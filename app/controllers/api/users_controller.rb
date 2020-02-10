@@ -2,6 +2,8 @@ class Api::UsersController < ApplicationController
   def show
     if current_user
       @username = current_user.name
+      @email = current_user.email
+      @id = current_user.id
       render "show.json.jb"
     end
   end

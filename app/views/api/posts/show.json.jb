@@ -7,7 +7,6 @@
   friendly_release_date: @post.friendly_release_date,
   story_id: @post.story_id,
   story: @post.story.title,
-  author: @post.story.author.pen_name,
   comments: @comments.map do |comment|
     {
       name: comment.name,

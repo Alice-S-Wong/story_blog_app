@@ -1,0 +1,6 @@
+@intros.map do |intro|
+  {
+    id: intro.id,
+    introduction: intro.introduction
+  }
+end

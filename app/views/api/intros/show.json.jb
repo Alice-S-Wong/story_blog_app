@@ -1,0 +1,4 @@
+{
+  id: @intro.id,
+  introduction: @intro.introduction
+}

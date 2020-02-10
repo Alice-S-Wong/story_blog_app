@@ -1,3 +1,5 @@
 {
-  username: @username
+  username: @username,
+  email: @email,
+  id: @id
 }

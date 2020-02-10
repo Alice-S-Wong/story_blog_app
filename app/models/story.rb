@@ -1,6 +1,5 @@
 class Story < ApplicationRecord
   has_many :posts
-  belongs_to :author
   def friendly_release_date
     date = self.release_date
     date_array = date.split(/-/)
