@@ -29,4 +29,8 @@ Rails.application.routes.draw do
     post "/intros" => "intros#create"
     patch "/intros/:id" => "intros#update"
   end
+
+  get '*all', to: 'welcome#index', constraints: lambda { |req|
+    req.path.exclude? '/api'
+  }
 end

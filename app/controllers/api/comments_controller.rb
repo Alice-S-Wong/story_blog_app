@@ -32,6 +32,8 @@ class Api::CommentsController < ApplicationController
     )
     if @comment.save
       render "show.json.jb"
+    else
+      render json: {errors: @comment.errors.full_messages}, status: :bad_request
     end
   end
   def destroy

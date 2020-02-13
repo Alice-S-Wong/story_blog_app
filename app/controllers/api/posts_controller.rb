@@ -36,7 +36,7 @@ class Api::PostsController < ApplicationController
     @post = Post.find(params[:id])
     p @post.release_date
     p DateTime.now.to_date.to_s
-    if @post.release_date < DateTime.now.to_date.to_s
+    if @post.release_date <= DateTime.now.to_date.to_s
       @comments = Comment.where(post_id: params[:id].to_i)
       if @comments
         render "show.json.jb"

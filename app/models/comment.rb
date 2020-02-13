@@ -1,4 +1,7 @@
 class Comment < ApplicationRecord
+  validates :name, presence: true
+  validates :title, presence: true
+  validates :body, presence: true
   belongs_to :post
   def friendly_date
     date = self.date
